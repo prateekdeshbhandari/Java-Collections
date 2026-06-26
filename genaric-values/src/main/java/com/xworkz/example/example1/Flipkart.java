@@ -1,10 +1,10 @@
 package com.xworkz.example.example1;
 
-public class Flipkart {
+public class Flipkart<T, T1, P> {
 
-    int orderId;
-    String orderName;
-    long contactNumber;
+    public T orderId;
+    public T1 orderName;
+   public P contactNumber;
 
     void onlineOrderApp() {
         System.out.println(orderId);
