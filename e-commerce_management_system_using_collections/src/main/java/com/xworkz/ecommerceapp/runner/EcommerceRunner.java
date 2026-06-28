@@ -160,6 +160,57 @@ public class EcommerceRunner {
         invoiceDTOS.add(invoice4);
         invoiceDTOS.add(invoice5);
         System.out.println("size in propertes..."+invoiceDTOS.size());
+
+
+        ShipmentDTO shipment1 = new ShipmentDTO(201, 101, "BlueDart", "BD123456789", "2026-07-05");
+        ShipmentDTO shipment2 = new ShipmentDTO(202, 102, "DTDC", "DT987654321", "2026-07-06");
+        ShipmentDTO shipment3 = new ShipmentDTO(203, 103, "Delhivery", "DL456789123", "2026-07-07");
+        ShipmentDTO shipment4 = new ShipmentDTO(204, 104, "India Post", "IP789123456", "2026-07-08");
+        ShipmentDTO shipment5 = new ShipmentDTO(205, 105, "FedEx", "FD321654987", "2026-07-09");
+
+
+        Collection<ShipmentDTO> shipmentDTOS = new ArrayList<>();
+
+        shipmentDTOS.add(shipment1);
+        shipmentDTOS.add(shipment2);
+        shipmentDTOS.add(shipment3);
+        shipmentDTOS.add(shipment4);
+        shipmentDTOS.add(shipment5);
+
+        System.out.println("size in propertes..."+shipmentDTOS.size());
+
+
+        ReviewDTO review1 = new ReviewDTO(1, 101, 1, 5, "Excellent product");
+        ReviewDTO review2 = new ReviewDTO(2, 102, 2, 4, "Very good quality");
+        ReviewDTO review3 = new ReviewDTO(3, 103, 3, 3, "Average performance");
+        ReviewDTO review4 = new ReviewDTO(4, 104, 4, 2, "Not satisfied");
+        ReviewDTO review5 = new ReviewDTO(5, 105, 5, 5, "Highly recommended");
+
+        Collection<ReviewDTO> reviewDTOS = new ArrayList<>();
+
+        reviewDTOS.add(review1);
+        reviewDTOS.add(review2);
+        reviewDTOS.add(review3);
+        reviewDTOS.add(review4);
+        reviewDTOS.add(review5);
+        System.out.println("size in propertes..."+reviewDTOS .size());
+
+        DiscountDTO discount1 = new DiscountDTO(1, "SAVE10", "10% Off on Electronics", 10.0, "2026-12-31");
+        DiscountDTO discount2 = new DiscountDTO(2, "WELCOME20", "20% Off for New Users", 20.0, "2026-10-15");
+        DiscountDTO discount3 = new DiscountDTO(3, "FESTIVE15", "Festival Special Discount", 15.0, "2026-11-30");
+        DiscountDTO discount4 = new DiscountDTO(4, "SUMMER25", "Summer Sale Offer", 25.0, "2026-08-31");
+        DiscountDTO discount5 = new DiscountDTO(5, "MEGA30", "Mega Sale Discount", 30.0, "2026-09-30");
+
+        Collection<DiscountDTO> discountDTOS = new ArrayList<>();
+
+        discountDTOS.add(discount1);
+        discountDTOS.add(discount2);
+        discountDTOS.add(discount3);
+        discountDTOS.add(discount4);
+        discountDTOS.add(discount5);
+
+        System.out.println("size in propertes..."+discountDTOS.size());
+
     }
 
 
