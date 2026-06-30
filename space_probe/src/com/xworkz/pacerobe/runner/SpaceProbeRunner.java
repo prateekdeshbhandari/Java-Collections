@@ -1177,6 +1177,64 @@ public class SpaceProbeRunner {
                 }
                 System.out.println(serialNoQuction++ + ":" + "have Communication Frequency: " + count13);
                 System.out.println(serialNoQuction++ + ":" + "lonching mass: " + count14);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            iterator=probeDTOS.iterator();
+            while(iterator.hasNext()){
+                SpaceProbeDTO element=iterator.next();
+
+                if(element.getArrivalDate().getYear()>2024){
+                    iterator.remove();
+                    System.out.println(element);
+                    count15++;
+
+                }
+            }
+                System.out.println(count15);
+
+
+
+
+
+
+
             }
 
 }
