@@ -130,9 +130,11 @@ boolean contemns=smartWatchDtos.contains(smartWatchDto);
                 iterator.remove();
             }
         }
+        System.out.println();
+
+        System.out.println(smartWatchDtos.get(1));
 
 
-        System.out.println(smartWatchDtos);
         System.out.println(smartWatchDtos.size());
 smartWatchDtos.remove(4);
         System.out.println(smartWatchDtos.size());
