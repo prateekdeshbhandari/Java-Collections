@@ -17,7 +17,9 @@ public class SmartWatchDto {
     @EqualsAndHashCode.Include
     private String model;
     private String color;
+    @EqualsAndHashCode.Include
     private double displaySize;
+    @EqualsAndHashCode.Include
     private boolean hasGPS;
     private boolean hasHeartRateMonitor;
     private int batteryLifeDays;
