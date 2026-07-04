@@ -32,7 +32,7 @@ public class MoviesRunner {
 
         CustemarDetiels custemarDetiels = (Id, name, number, sallry) -> {
             System.out.println(Id+" "+ name+" "+number+" "+sallry);
-return  name;
+return name;
         };
      String g=   custemarDetiels.custemar(34,"Prateek",87123468123l,25000.87);
 
