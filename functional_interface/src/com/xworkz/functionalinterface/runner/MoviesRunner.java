@@ -58,6 +58,59 @@ return name;
 
         kundan.allodd(2);
 
+        ReadLength readLength=(name) -> (name.length()) ;
+
+        System.out.println(readLength.readLine("Prateek"));
+
+
+        FoodQuntity foodQuntity=(name,quntity,price) -> {
+            System.out.println(quntity+" "+name+" "+price);
+            return (int) ( price * quntity);
+
+
+        };
+        int fooo=foodQuntity.food("fsd",3,250);
+        System.out.println(fooo);
+
+        BankAccount bankAccount=(pin, amount) -> {
+
+            return pin==1234&&amount<=10000.00;
+        };
+        boolean b=bankAccount.DebitAmount(124,5000);
+        System.out.println(b);
+if(b){
+    System.out.println("data is sucesfully");
+
+}else{
+    System.out.println("pin amount is not match");
+}
+        BookStore bookStore=(bookId)->{
+            if(bookId==101)
+                return "Effective Java";
+            return "Book Not Found";
+        };
+        System.out.println(bookStore.getBookName(101));
+
+        Gst gst=(entries)->
+        {
+            for(int entry:entries)
+            {
+                if(entry>10000)
+                {
+                    System.out.println(entry+": GST will apply");
+                    entry+=250;
+                    System.out.println(entry+"(updated)");
+                }
+                else
+                {
+                    System.out.println(entry);
+                }
+            }
+            return 0;
+        };
+        int[] entries={12300,3455,231,45067};
+        gst.getAmount(entries);
+
 
 
 
