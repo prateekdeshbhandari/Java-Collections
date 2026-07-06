@@ -111,6 +111,50 @@ if(b){
         int[] entries={12300,3455,231,45067};
         gst.getAmount(entries);
 
+        HighWay highWay=(nhNumber,name)->
+        {
+            System.out.println(nhNumber+", "+name);
+            return 90.0;
+        };
+        System.out.println(highWay.speed(153,"national highway"));
+
+        Roof roof=(bricksCount)->
+        {
+            System.out.println(bricksCount+" in bricks");
+            return 10.0;
+        };
+        System.out.println(roof.getTime(123));
+
+        CottonMill cottonMill=(type)->{
+            System.out.println(type+" in Kg");
+            return 250;
+        };
+        System.out.println(cottonMill.getQuantity("Fluffy Rice"));
+
+        Bakery bakery=(item,quantity)->{
+            System.out.println(item+" : "+quantity);
+            return quantity*45.5;
+        };
+        System.out.println(bakery.getPrice("Cake",3));
+
+
+        Hospital hospital=(department,roomNo)->{
+            System.out.println(department+" "+roomNo);
+            return "Dr. Kumar";
+        };
+        System.out.println(hospital.getDoctor("Cardiology",201));
+
+        School school=(rollNo)->{
+            return rollNo==101;
+        };
+        System.out.println(school.isPresent(101));
+
+        Library library=(category,author)->{
+            System.out.println(category+" "+author);
+            return 250;
+        };
+        System.out.println(library.getBooks("Java","James Gosling"));
+
 
 
 
