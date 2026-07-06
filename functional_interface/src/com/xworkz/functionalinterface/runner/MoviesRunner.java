@@ -2,8 +2,6 @@ package com.xworkz.functionalinterface.runner;
 
 import com.xworkz.functionalinterface.dao.*;
 
-import javax.lang.model.element.Name;
-
 public class MoviesRunner {
     public static void main(String[] args) {
         Movies movies = (arr) -> {
@@ -37,6 +35,33 @@ return name;
      String g=   custemarDetiels.custemar(34,"Prateek",87123468123l,25000.87);
 
         System.out.println(g);
+
+
+        OnAndOfButton onAndOfButton=(buttonIson)->buttonIson.equals("on");
+//            if(buttonIson.equals("on")){
+//                return true;
+//            }
+//            return false;
+
+//        };
+       boolean s= onAndOfButton.onOf("0n");
+        System.out.println(s);
+
+        Kundan kundan=(i) -> {
+
+            for(i=0;i<=10;i++){
+          if(i * 2 == 0) {
+              System.out.println(i);
+          }
+          }
+        };
+
+        kundan.allodd(2);
+
+
+
+
+
 
     }
 }
