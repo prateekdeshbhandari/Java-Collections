@@ -155,10 +155,24 @@ if(b){
         };
         System.out.println(library.getBooks("Java","James Gosling"));
 
+Cinema cinema=((moveName, setes) -> 120*setes);
+int ri=cinema.BookTicket("kgf",2);
+
+        System.out.println(ri);
+
+        HouseBuildCalculetion houseBuildCalculetion=((floor, area) -> floor*area*1700.00);
+        System.out.println(houseBuildCalculetion.calculetion(2,1418.00));
+
+        ItJob itJob=(parfomens ->{
+            if(parfomens.equals("skilld")){
 
 
-
-
+                return "you skill selected";
+            }else {
+                return "you not skill rejectted";
+            }
+        });
+        System.out.println( itJob.howTodoJob("skill"));
 
     }
 }
