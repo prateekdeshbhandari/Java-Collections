@@ -16,12 +16,12 @@ public class CounteryNameRunner {
         countryNames.add("Astreleya");
         countryNames.add("fransh");
         countryNames.add("USA");
-        countryNames.add("rasya");
-        countryNames.add("china");
+        countryNames.add("Rasya");
+        countryNames.add("China");
         countryNames.add("UK");
-        countryNames.add("japan");
-        countryNames.add("shrilanka");
-        countryNames.add("southaprika");
+        countryNames.add("Japan");
+        countryNames.add("Shrilanka");
+        countryNames.add("Southaprika");
 
 
      countryNames.forEach(( countryName)-> System.out.println("country name is: "+countryName));
@@ -36,7 +36,8 @@ public class CounteryNameRunner {
         System.out.println("============================================================");
         countryNames.stream().filter(c->c.length()<5).forEach(System.out::println);
         System.out.println("============================================================");
-
+Collections.sort(countryNames);
+countryNames.forEach(System.out::println);
 
             }
         }

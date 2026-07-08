@@ -211,6 +211,9 @@ public class EcommerceRunner {
 
         System.out.println("size in propertes..."+discountDTOS.size());
 
+        discountDTOS.addAll(Arrays.);
+        discountDTOS.forEach(discountDTO -> System.out.println(discountDTO));
+
     }
 
 

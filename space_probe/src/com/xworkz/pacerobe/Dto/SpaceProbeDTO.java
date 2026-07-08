@@ -4,6 +4,7 @@ import lombok.*;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Comparator;
 
 @Setter
 @Getter
@@ -11,9 +12,9 @@ import java.time.LocalDateTime;
 
 @ToString
 
-public class SpaceProbeDTO implements Serializable {
+public class SpaceProbeDTO implements Serializable,Comparable<SpaceProbeDTO> {
 
-    private String probeId;
+    private int probeId;
     private String missionName;
     private String targetCelestialBody;
     private String manufacturer;
@@ -33,5 +34,14 @@ public class SpaceProbeDTO implements Serializable {
     private double fuelRemaining;
     private String trajectoryPath;
 
+    @Override
+    public int compareTo(SpaceProbeDTO o) {
+        SpaceProbeDTO left=this;
+        SpaceProbeDTO right=o;
+        if(left.probeId==right.probeId)return 0;
+     else if (left.probeId >right.probeId) return 100;
+            else return -100;
+
+    }
 }
 

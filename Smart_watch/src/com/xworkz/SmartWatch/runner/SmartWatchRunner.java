@@ -3,12 +3,7 @@ package com.xworkz.SmartWatch.runner;
 import com.xworkz.SmartWatch.Dto.SmartWatchDto;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
-
-
+import java.util.*;
 
 
 public class SmartWatchRunner {
@@ -156,5 +151,6 @@ public class SmartWatchRunner {
         System.out.println(smartWatchDtos.size());
 
         smartWatchDtos.set(0,new SmartWatchDto());
+        
 }
 }
