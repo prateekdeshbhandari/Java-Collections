@@ -44,13 +44,16 @@ public class HospitalRunner {
         list.add(h14);
         list.add(h15);
 
-        Comparator<Hospital>comparator=(o1,o2)->{
-            System.out.println("comparing"+o1+"witch"+o2);
-            return o2.getHospitalName().compareTo(o1.getHospitalName());
-        };
-Collections.sort(list,comparator);
-list.forEach(System.out::println);
+//        Comparator<Hospital>comparator=(o1,o2)->{
+//            System.out.println("comparing"+o1+"witch"+o2);
+//            return o2.getHospitalName().compareTo(o1.getHospitalName());
+//        };
+//Collections.sort(list,comparator);
+//list.forEach(System.out::println);
 
+Hospital hospital=new Hospital();
+Collections.sort(list,hospital);
+        list.forEach(System.out::println);
 
 
 

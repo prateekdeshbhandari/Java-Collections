@@ -2,6 +2,7 @@ package com.xworkz.sort.dto;
 
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
 @Getter
@@ -9,7 +10,7 @@ import java.util.Comparator;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class Hospital implements Comparator<Hospital> {
+public class Hospital implements Serializable,Comparator<Hospital> {
     private int hospitalId;
     private String hospitalName;
     private String city;
