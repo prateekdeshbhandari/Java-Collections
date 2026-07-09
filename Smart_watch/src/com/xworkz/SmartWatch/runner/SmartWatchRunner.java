@@ -129,11 +129,11 @@ public class SmartWatchRunner {
         System.out.println(smartWatchDtos.get(1));
 
 
-//        System.out.println(smartWatchDtos.size());
-//        smartWatchDtos.remove(4);
-//        System.out.println(smartWatchDtos.size());
-//        smartWatchDtos.removeAll(smartWatchDtos);
-//        System.out.println(smartWatchDtos.size());
+        System.out.println(smartWatchDtos.size());
+        smartWatchDtos.remove(4);
+        System.out.println(smartWatchDtos.size());
+        smartWatchDtos.removeAll(smartWatchDtos);
+        System.out.println(smartWatchDtos.size());
 
 
 //        ListIterator<SmartWatchDto> smartWatchDtoIterator1 = smartWatchDtos.listIterator(smartWatchDtos.size());
