@@ -6,11 +6,12 @@ import lombok.ToString;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
 @Setter
 @Getter
 @ToString
-public class WarDTO implements Serializable ,Comparable<WarDTO>{
+public class WarDTO implements Serializable , Comparable<WarDTO> {
 
     private String warName;
     private LocalDate startDate;
@@ -46,8 +47,12 @@ public class WarDTO implements Serializable ,Comparable<WarDTO>{
     public int compareTo(WarDTO o) {
         WarDTO left=this;
         WarDTO right=o;
-        if(left.warName==right.warName)return 0;
-       // else if (left.warName >right.warName) return 100;
-        else return -100;
+        return left.warName.compareTo(right.warName);
+
     }
+
+//    @Override
+//    public int compare(WarDTO o1, WarDTO o2) {
+//        return 0;
+//    }
 }

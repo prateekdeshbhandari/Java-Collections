@@ -79,8 +79,11 @@ public class WarRunner {
         System.out.println("======================================================");
         wars.stream().filter(war->war.getLocation().equals("USA")&&war.getOutcome().equals("Victory")&&war.getCasualties()>10000).forEach(System.out::println);
         System.out.println("======================================================");
-
-
+boolean c=wars.isEmpty();
+        System.out.println(c);
+        boolean equals = wars.equals(wars);
+        System.out.println(equals);
         Collections.sort((wars));
+        wars.forEach(System.out::println);
     }
 }
