@@ -46,5 +46,7 @@ public class BankRunner {
 //        Collections.sort(list);
 //        list.forEach(System.out::println);
 list.stream().sorted((a1,a2)->a2.getBranch().compareTo(a1.getBranch())).forEach(System.out::println);
+        System.out.println("===============================");
+        list.stream().sorted((a1,a2)->Double.compare(a1.getBalance(),a2.getBalance())).forEach(System.out::println);
     }
 }
