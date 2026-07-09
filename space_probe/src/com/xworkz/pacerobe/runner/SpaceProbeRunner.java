@@ -1093,7 +1093,7 @@ public class SpaceProbeRunner {
 
                     SpaceProbeDTO element = iterator.next();
 
-                    if (element.getFuelRemaining()<75.00) {
+                    if (element.getFuelRemaining()<34.00) {
                         System.out.println( element);
                         count4++;
                     }
