@@ -81,6 +81,7 @@ public class WarRunner {
         System.out.println("======================================================");
 boolean c=wars.isEmpty();
         System.out.println(c);
+        System.out.println();
         boolean equals = wars.equals(wars);
         System.out.println(equals);
         Collections.sort((wars));
