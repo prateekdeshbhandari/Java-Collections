@@ -10,7 +10,7 @@ import java.util.List;
 @Setter
 @Getter
 @ToString
-public class WarDTO implements Serializable {
+public class WarDTO implements Serializable ,Comparable<WarDTO>{
 
     private String warName;
     private LocalDate startDate;
@@ -42,4 +42,12 @@ public class WarDTO implements Serializable {
         this.reason = reason;
     }
 
+    @Override
+    public int compareTo(WarDTO o) {
+        WarDTO left=this;
+        WarDTO right=o;
+        if(left.warName==right.warName)return 0;
+       // else if (left.warName >right.warName) return 100;
+        else return -100;
+    }
 }

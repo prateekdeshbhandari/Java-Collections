@@ -4,6 +4,7 @@ import com.xwork.streamapi.dto.WarDTO;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class WarRunner {
@@ -78,5 +79,8 @@ public class WarRunner {
         System.out.println("======================================================");
         wars.stream().filter(war->war.getLocation().equals("USA")&&war.getOutcome().equals("Victory")&&war.getCasualties()>10000).forEach(System.out::println);
         System.out.println("======================================================");
+
+
+        Collections.sort((wars));
     }
 }

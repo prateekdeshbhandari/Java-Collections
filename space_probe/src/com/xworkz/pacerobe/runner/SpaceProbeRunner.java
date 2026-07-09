@@ -1182,37 +1182,6 @@ public class SpaceProbeRunner {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             iterator=probeDTOS.iterator();
             while(iterator.hasNext()){
                 SpaceProbeDTO element=iterator.next();
