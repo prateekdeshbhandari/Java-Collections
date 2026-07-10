@@ -4,6 +4,7 @@ import com.xworkz.sort.dto.BankAccount;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class BankRunner {
@@ -48,5 +49,15 @@ public class BankRunner {
 list.stream().sorted((a1,a2)->a2.getBranch().compareTo(a1.getBranch())).forEach(System.out::println);
         System.out.println("===============================");
         list.stream().sorted((a1,a2)->Double.compare(a1.getBalance(),a2.getBalance())).forEach(System.out::println);
+
+        System.out.println("===============================");
+        list.stream().map(bankAccount -> bankAccount.getAccountNumber())
+                .sorted((a1,a2)->a2.compareTo(a1)).forEach(System.out::println);
+//        Comparator comparator=(a1,a2)->{
+//            System.out.println(a1+""+a2);
+//            return Integer.compare(a1.ge);
+//        }
+
+
     }
 }

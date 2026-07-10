@@ -10,15 +10,13 @@ import java.util.Comparator;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class CricketPlayer implements Serializable, Comparator<CricketPlayer> {
+public class CricketPlayer implements Serializable {
     private int playerId;
     private String playerName;
     private String team;
     private int runs;
     private double average;
 
-    @Override
-    public int compare(CricketPlayer o1, CricketPlayer o2) {
-        return 0;
-    }
+
+
 }

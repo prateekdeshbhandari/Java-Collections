@@ -3,6 +3,8 @@ package com.xworkz.sort.Runner;
 import com.xworkz.sort.dto.Movie;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class MoveRunner {
@@ -42,5 +44,8 @@ public class MoveRunner {
         list.add(m15);
 
         list.stream().sorted((o1, o2) -> Integer.compare(o2.getMovieId(), o1.getMovieId())).forEach(System.out::println);
+
+
+
     }
 }

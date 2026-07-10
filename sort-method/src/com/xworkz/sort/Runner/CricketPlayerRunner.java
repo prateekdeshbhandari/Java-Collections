@@ -4,6 +4,9 @@ import com.xworkz.sort.dto.CricketPlayer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+
+
 
 public class CricketPlayerRunner {
     public static void main(String[] args) {
@@ -41,6 +44,21 @@ public class CricketPlayerRunner {
         list.add(c14);
         list.add(c15);
 
-    list.stream().sorted((o1,o2)->o1.getTeam().compareTo(o2.getTeam())).forEach(System.out::println);
+        list.stream().sorted((o1, o2) -> o1.getTeam().compareTo(o2.getTeam())).forEach(System.out::println);
+        System.out.println("=========================================");
+
+        list.stream().filter(cricketPlayer -> (cricketPlayer.getPlayerId() > 105)).map(cricketPlayer -> cricketPlayer.getPlayerId())
+                .sorted((a, d) -> a.compareTo(d)).forEach(System.out::println);
+        System.out.println("=========================================");
+        list.stream()
+                .filter(cricketPlayer ->
+                        cricketPlayer.getPlayerName().toLowerCase().contains("virat Kohli") ||
+                                cricketPlayer.getTeam().toLowerCase().contains("india"))
+                .map(cricketPlayer -> cricketPlayer.getTeam()).sorted((a, b) -> a.compareTo(b))
+
+                .forEach(s -> System.out.println(s));
+
+
+
     }
 }

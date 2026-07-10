@@ -10,15 +10,15 @@ import java.util.Comparator;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class Hospital implements Serializable,Comparator<Hospital> {
+public class Hospital  {
     private int hospitalId;
     private String hospitalName;
     private String city;
     private int beds;
     private double rating;
 
-    @Override
-    public int compare(Hospital o1, Hospital o2) {
-        return Integer.compare(o1.hospitalId, o2.hospitalId);
-    }
+//    @Override
+//    public int compare(Hospital o1, Hospital o2) {
+//        return Integer.compare(o1.hospitalId, o2.hospitalId);
+//    }
 }
