@@ -92,7 +92,7 @@ Collections.sort(diseaseList,comparator1);
                 })
                 .forEach(System.out::println);
 
-
+        diseaseList.stream().
 
 
     }
