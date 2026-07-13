@@ -92,7 +92,26 @@ Collections.sort(diseaseList,comparator1);
                 })
                 .forEach(System.out::println);
 
-        diseaseList.stream().
+        Optional<DiseaseDTO> disease = diseaseList.stream()
+                .filter(d -> d.getCause().equalsIgnoreCase("Viral"))
+                .findFirst();
+
+        diseaseList.stream()
+                .filter(Objects::nonNull)
+                .forEach(System.out::println);
+
+        List<String> names = diseaseList.stream()
+                .map(DiseaseDTO::getName)
+                .toList();
+
+        diseaseList.stream()
+                .filter(d -> d.getName()==null)
+                .forEach(System.out::println);
+
+        diseaseList.stream()
+                .sorted(Comparator.comparing(DiseaseDTO::getName));
+
+
 
 
     }
