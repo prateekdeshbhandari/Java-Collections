@@ -111,6 +111,8 @@ Collections.sort(diseaseList,comparator1);
         diseaseList.stream()
                 .sorted(Comparator.comparing(DiseaseDTO::getName));
 
+        System.out.println("========================================================");
+diseaseList.stream().map(diseaseDTO -> diseaseDTO.getCure()).distinct().sorted(Collections.reverseOrder()).forEach(System.out::println);
 
 
 
