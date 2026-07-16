@@ -11,7 +11,7 @@ public class DiseaseRunner {
         DiseaseDTO d3 = new DiseaseDTO(103, "Dengue", "Viral disease", "High fever", "Dengue virus", "Supportive care", "No specific cure", "Avoid mosquito bites", "Viral");
         DiseaseDTO d4 = new DiseaseDTO(104, "Tuberculosis", "Lung infection", "Persistent cough", "Mycobacterium tuberculosis", "Antibiotics", "Curable", "BCG vaccine", "Bacterial");
         DiseaseDTO d5 = new DiseaseDTO(105, "Typhoid", "Bacterial infection", "High fever", "Salmonella typhi", "Antibiotics", "Curable", "Clean water", "Bacterial");
-        DiseaseDTO d6 = new DiseaseDTO(106, "Asthma", "Respiratory disorder", "Breathing difficulty", "Allergy", "Inhalers", "Not permanent", "Avoid allergens", "Chronic");
+        DiseaseDTO d6 = new DiseaseDTO(105, "Asthma", "Respiratory disorder", "Breathing difficulty", "Allergy", "Inhalers", "Not permanent", "Avoid allergens", "Chronic");
         DiseaseDTO d7 = new DiseaseDTO(107, "COVID-19", "Coronavirus infection", "Cough and fever", "SARS-CoV-2", "Antiviral treatment", "Usually recoverable", "Vaccination", "Viral");
         DiseaseDTO d8 = new DiseaseDTO(108, "Cholera", "Water-borne disease", "Severe diarrhea", "Vibrio cholerae", "ORS and antibiotics", "Curable", "Safe drinking water", "Bacterial");
         DiseaseDTO d9 = new DiseaseDTO(109, "Chickenpox", "Viral infection", "Skin rash", "Varicella-zoster virus", "Antiviral medicines", "Curable", "Vaccination", "Viral");
@@ -113,7 +113,15 @@ Collections.sort(diseaseList,comparator1);
 
         System.out.println("========================================================");
 diseaseList.stream().map(diseaseDTO -> diseaseDTO.getCure()).distinct().sorted(Collections.reverseOrder()).forEach(System.out::println);
-
+        System.out.println("========================================================");
+Set<DiseaseDTO>diseaseDTOS=new
+        LinkedHashSet<>();
+diseaseDTOS.addAll(diseaseList);
+diseaseDTOS.stream().sorted((a1,a2)->Integer.compare(a1.getId(), a2.getId())).forEach(System.out::println);
+//for(DiseaseDTO dto:diseaseDTOS){
+//    System.out.println(dto);
+//
+//}
 
 
     }
