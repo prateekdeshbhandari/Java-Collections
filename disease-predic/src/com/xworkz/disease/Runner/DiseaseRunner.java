@@ -118,10 +118,10 @@ Set<DiseaseDTO>diseaseDTOS=new
         LinkedHashSet<>();
 diseaseDTOS.addAll(diseaseList);
 diseaseDTOS.stream().sorted((a1,a2)->Integer.compare(a1.getId(), a2.getId())).forEach(System.out::println);
-//for(DiseaseDTO dto:diseaseDTOS){
-//    System.out.println(dto);
-//
-//}
+for(DiseaseDTO dto:diseaseDTOS){
+    System.out.println(dto);
+
+}
 
 
     }
