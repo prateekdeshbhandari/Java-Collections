@@ -3,6 +3,7 @@ package com.workz.set.Runner;
 import com.workz.set.dto.VehicleDto;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class VehicleRunner {
@@ -10,7 +11,7 @@ public class VehicleRunner {
 
 
 
-            Set<VehicleDto> vehicleDtos = new HashSet<>();
+            Set<VehicleDto> vehicleDtos = new LinkedHashSet<>();
 
             vehicleDtos.add(new VehicleDto("BMW"));
             vehicleDtos.add(new VehicleDto("Audi"));
@@ -20,7 +21,7 @@ public class VehicleRunner {
             vehicleDtos.add(new VehicleDto("BMW"));
             vehicleDtos.add(new VehicleDto("Mahindra"));
             vehicleDtos.add(new VehicleDto("Tata"));
-            vehicleDtos.add(new VehicleDto("Kia"));
+            vehicleDtos.add(new VehicleDto("Ford"));
             vehicleDtos.add(new VehicleDto("Ford"));
 
             System.out.println(vehicleDtos);
