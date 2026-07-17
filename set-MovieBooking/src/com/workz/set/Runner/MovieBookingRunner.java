@@ -25,8 +25,7 @@ for(MovieBookingDTO movieBookingDTO:movieBookings){
 }
         System.out.println(movieBookings.size());
         System.out.println("======================================================");
-
-
+        
 
 
     }
