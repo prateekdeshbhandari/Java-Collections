@@ -3,6 +3,7 @@ package com.xwork.Snack.runner;
 import com.xwork.Snack.dto.SnackDTO;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class SnackRunner {
     public static void main(String[] args) {
@@ -16,7 +17,7 @@ public class SnackRunner {
 
         System.out.println("Total objects added: 5");
         Set<SnackDTO> snackDTOS = new HashSet<>();
-        snackDTOS.add(new SnackDTO("Kurkure", "Masala", 90.0, 20.0));
+        snackSet.add(new SnackDTO("Nuts", "Roasted", 60.0, 70.0));
         snackDTOS.add(new SnackDTO("Lays", "Classic", 95.0, 25.0));
         snackDTOS.add(new SnackDTO("Cheese", "Cheesy", 75.0, 35.0));
         snackDTOS.addAll(snackSet);
@@ -24,7 +25,7 @@ public class SnackRunner {
         snackSet.addAll(snackDTOS);
 
         System.out.println("Unique objects in Set: " + snackSet.size());
-        snackSet.forEach(snack -> System.out.println(snack));
+        snackSet.forEach(snack -> System.out.println(snack.hashCode()));
         System.out.println("====================================================");
         snackSet.remove(new SnackDTO("Popcorn", "Salty", 80.0, 40.0));
         System.out.println("After removing Popcorn: ");
@@ -107,6 +108,17 @@ public class SnackRunner {
         System.out.println(snackDTOS2.first());
         System.out.println(snackDTOS2.last());
 snackDTOS.stream().map(snackDTO1 -> snackDTO1.getName()).sorted(Comparator.reverseOrder()).forEach(System.out::println);
+
+
+        snackDTOS2.forEach(System.out::println);
+        System.out.println("====================================================");
+TreeSet<SnackDTO>ssssyu=snackSet.stream().filter(snackDTO1 -> snackDTOS.contains(snackDTO1)).collect(Collectors.toCollection(TreeSet::new));
+        System.out.println(ssssyu);
+
+        snackSet.stream().filter(snackDTO1 -> snackDTO1.getName().equals("Biscuit")).forEach(System.out::println);
+
+TreeSet<SnackDTO> snackDTO1= ssssyu;
+        System.out.println(snackDTO1);
 
 
     }
