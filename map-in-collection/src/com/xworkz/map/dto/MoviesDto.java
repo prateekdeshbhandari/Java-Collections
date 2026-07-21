@@ -11,10 +11,14 @@ import java.io.Serializable;
 @Setter
 @AllArgsConstructor
 @EqualsAndHashCode
-public class MoviesDto implements Serializable {
+public class MoviesDto implements Serializable,Comparable<MoviesDto> {
     private int movieId;
     private String movieName;
     private String language;
     private double budget;
 
+    @Override
+    public int compareTo(MoviesDto o) {
+        return Integer.compare(this.movieId , o.movieId);
+    }
 }
