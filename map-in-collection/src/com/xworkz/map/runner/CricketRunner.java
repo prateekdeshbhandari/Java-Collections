@@ -19,5 +19,6 @@ public class CricketRunner {
         map.put(new CaptainDTO(5, "Garfield Sobers", "West Indies", 110), new TeamDTO(5, "West Indies", "Test", 5));
 
         map.forEach((key, value) -> System.out.println(key + " -> " + value));
+        map.
     }
 }
