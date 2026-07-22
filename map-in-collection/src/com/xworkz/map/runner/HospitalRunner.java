@@ -3,6 +3,7 @@ package com.xworkz.map.runner;
 import com.xworkz.map.dto.DoctorDTO;
 import com.xworkz.map.dto.HospitalDTO;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -16,5 +17,16 @@ public class HospitalRunner {
         map.put(new HospitalDTO(5, "Columbia Asia", "Hyderabad", 120), new DoctorDTO(5, "Dr. Davis", "Dermatology", 6));
 
         map.forEach((key, value) -> System.out.println(key + " -> " + value));
+        System.out.println(map.containsKey((new HospitalDTO(5, "Columbia Asia", "Hyderabad", 120))));
+        map.containsValue(new DoctorDTO(5, "Dr. Davis", "Dermatology", 6));
+
+
+        System.out.println( map.get(new HospitalDTO(1, "Apollo", "Bangalore", 100)));
+       map.getOrDefault(map, null);
+        System.out.println("======================================");
+
+        System.out.println(map.containsKey(new HospitalDTO(1, "Apollo", "Bangalore", 100)));
+        System.out.println("======================================");
+
     }
 }

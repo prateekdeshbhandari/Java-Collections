@@ -4,6 +4,7 @@ import com.xworkz.map.dto.CaptainDTO;
 import com.xworkz.map.dto.TeamDTO;
 
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -19,6 +20,12 @@ public class CricketRunner {
         map.put(new CaptainDTO(5, "Garfield Sobers", "West Indies", 110), new TeamDTO(5, "West Indies", "Test", 5));
 
         map.forEach((key, value) -> System.out.println(key + " -> " + value));
-        map.
+        map.keySet().forEach(System.out::println);
+       map.containsKey(new CaptainDTO(1, "Sourav Ganguly", "India", 100));
+       map.containsValue(new TeamDTO(1, "India", "Test", 1));
+       map.get(new CaptainDTO(1, "Sourav Ganguly", "India", 100));
+       map.remove(new CaptainDTO(1, "Sourav Ganguly", "India", 100));
+       map.values().forEach(System.out::println);
+        System.out.println(map.containsKey(map));
     }
 }
