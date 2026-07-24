@@ -15,11 +15,11 @@ public class HospitalRunner {
         map.put(new HospitalDTO(3, "Max", "Delhi", 200), new DoctorDTO(3, "Dr. Williams", "Orthopedics", 12));
         map.put(new HospitalDTO(4, "AIIMS", "New Delhi", 250), new DoctorDTO(4, "Dr. Brown", "Pediatrics", 15));
         map.put(new HospitalDTO(5, "Columbia Asia", "Hyderabad", 120), new DoctorDTO(5, "Dr. Davis", "Dermatology", 6));
-
+        System.out.println("======================================");
         map.forEach((key, value) -> System.out.println(key + " -> " + value));
         System.out.println(map.containsKey((new HospitalDTO(5, "Columbia Asia", "Hyderabad", 120))));
         map.containsValue(new DoctorDTO(5, "Dr. Davis", "Dermatology", 6));
-
+        System.out.println("======================================");
 
         System.out.println( map.get(new HospitalDTO(1, "Apollo", "Bangalore", 100)));
        map.getOrDefault(map, null);
